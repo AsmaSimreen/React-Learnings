@@ -1,0 +1,39 @@
+<!-- Basic JavaScript-rendered Hello World -->
+<!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
+<!-- 🐨 Then create a <script type="module"> for your JavaScript -->
+<!-- These next instructions are to be written in JavaScript in the <script> tag -->
+<!-- 🐨 Create a div -->
+<!--   💰 document.createElement('div') -->
+<!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
+<!--   💰 div.textContent = '...' -->
+<!-- 🐨 Append the div to the root div using `append` -->
+<!--   💰 document.getElementById('root') -->
+
+<!-- First Approach -->
+<html>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      const rootElement = document.getElementById("root");
+      const element = document.createElement("div");
+      element.textContent = "Hello World";
+      element.className = "container";
+      rootElement.append(element);
+    </script>
+  </body>
+</html>
+
+<!-- Extra Credit -->
+<html>
+    <body>
+    <script type="module">
+        const rootElement2 = document.createElement('div');
+        rootElement2.setAttribute('id', 'root');
+        document.body.append(rootElement2);
+        const element2 = document.createElement('div');
+        element2.textContent = 'Hello World';
+        element2.className = 'container';
+        rootElement2.append(element);
+    </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!-- Intro to raw React APIs -->
+<!-- http://localhost:3000/isolated/exercise/02.html -->
+<!-- 🐨 add React and ReactDOM on the page.
+    💰 Here are script tags that'll do the job:
+    <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+-->
+<!-- First Approach -->
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+  <script type="module">
+    const elementProps = {
+      className: "container",
+      children: "Hello World",
+    };
+    const element = React.createElement("div", elementProps);
+    ReactDOM.render(element, root);
+  </script>
+</body>
+
+<!-- Extra Credit
+    See if you can figure out how to write the JavaScript + React code to generate this DOM output: -->
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+  <script type="module">
+    const element2 = React.createElement(
+      "div",
+      { className: "container" },
+      "Hello",
+      " ",
+      "World"
+    );
+    //or
+    // React.createElement("div", {
+    //   className: "container",
+    //   children: ["Hello", " ", "World"],
+    // });
+    ReactDOM.render(element2, root);
+  </script>
+
+  <!-- or  -->
+
+  const helloElement = React.createElement('span', null, 'Hello'); const
+  worldElement = React.createElement('span', null, 'World'); const element3 =
+  React.createElement( "div", { className: "container" }, helloElement, " ",
+  worldElement, );
+</body>
