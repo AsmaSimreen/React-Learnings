@@ -1,7 +1,12 @@
 // useEffect: HTTP requests
 
 import * as React from 'react'
-import { PokemonForm, PokemonInfoFallback, PokemonDataView, fetchPokemon } from '../pokemon'
+import { 
+  PokemonForm, 
+  PokemonInfoFallback, 
+  PokemonDataView, 
+  fetchPokemon 
+} from '../pokemon'
 
 function PokemonInfo({ pokemonName }) {
   const [pokemon, setPokemon] = React.useState(null);
@@ -25,10 +30,9 @@ function PokemonInfo({ pokemonName }) {
     return <PokemonInfoFallback name={pokemonName} />
   }
   else {
-    <PokemonDataView pokemon={pokemon} />
+    return <PokemonDataView pokemon={pokemon} />
   }
-  // 💣 remove this
-  return 'TODO'
+  
 }
 
 function App() {
