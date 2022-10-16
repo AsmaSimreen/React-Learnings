@@ -7,26 +7,26 @@ function Counter({ initialCount = 0, step = 1 }) {
     const increment = () => setCount(count + step)
     return <button onClick={increment}>{count}</button>
   }
-  
   function App() {
-    return <Counter />
-  }
+      return <Counter />
+    }
   
   export default App
+  
 */
 
 function countReducer(state, newState) {
-  return newState
+    return newState
 }
 
 function Counter({ initialCount = 0, step = 1 }) {
-  const [count, setCount] = React.useReducer(countReducer, initialCount);
-  const increment = () => setCount(count + step)
-  return <button onClick={increment}>{count}</button>
+    const [count, setCount] = React.useReducer(countReducer, initialCount);
+    const increment = () => setCount(count + step)
+    return <button onClick={increment}>{count}</button>
 }
 
 function App() {
-  return <Counter />
+    return <Counter />
 }
 
 export default App
